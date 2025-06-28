@@ -2,9 +2,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY CollegeManagementAPI.csproj ./
+# Copy csproj from subfolder
+COPY CollegeManagementAPI/CollegeManagementAPI.csproj ./CollegeManagementAPI/
+WORKDIR /src/CollegeManagementAPI
 RUN dotnet restore
 
+# Copy the rest of the code
 COPY . ./
 RUN dotnet publish -c Release -o /app/publish
 
