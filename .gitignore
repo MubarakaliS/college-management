@@ -1,0 +1,28 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Visual Studio working folders
+.vscode/
+*.vs/
+
+# Ignore logs
+*.log
+
+# Ignore publish output
+publish/
+
+# Ignore secrets and config
+secrets.json
+appsettings.*.json
+!appsettings.json  # Keep base config if needed
+
+# Ignore other system files
+Thumbs.db
+.DS_Store
